@@ -25,14 +25,14 @@ int main(void) {
 	int n; /*number of numbers to read*/
 	/*readin n and check that is is OK*/
 
-	int *numbers = malloc(sizeof(int) * n); /the numbers read*/
+	int *numbers = malloc(sizeof(int) * n); /*the numbers read*/
 
 	/*readin the n numbers in the array numbers*/
 
-	if (isJollyJumber(numbers, n))
-		printf("it is a Jolly Jumper");
-	else
-		printf("not a Jolly Jumper");
+	if (isJollyJumber(numbers, n)) {
+		printf("it is a Jolly Jumper");}
+	else {
+		printf("not a Jolly Jumper");}
 	return 0;
 
 }
