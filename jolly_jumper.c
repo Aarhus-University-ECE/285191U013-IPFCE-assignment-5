@@ -9,7 +9,8 @@ bool is_jolly_jumper(const int seq[], int size) {
 
 #ifndef TEST
 
-int main() { 
+// Answer to exercise 7.b
+int main() {
 
 	return 0;
 }
