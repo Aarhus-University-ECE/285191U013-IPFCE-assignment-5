@@ -6,7 +6,7 @@ typedef struct point {
   int y;
 } point;
 
-// add your definition of circle here. You need top call it "circle"
+// add your definition (struct) of circle here. You need to call it "circle"
 
 void five_circles(circle c[]);
 bool circle_is_valid(const circle *c);
