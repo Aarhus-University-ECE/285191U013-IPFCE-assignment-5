@@ -12,3 +12,9 @@ bool circle_is_valid(const circle *c) {
 void translate(circle *c, const point *p) {
   // answer to exercise 6.d
 }
+
+#ifndef TEST
+
+int main() { return 0; }
+
+#endif
