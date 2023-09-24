@@ -10,8 +10,12 @@ TEST_CASE("five_circles", "[circle]") {
   circle circles[5];
   five_circles(circles);
   for (int i = 0; i < 5; ++i) {
-    REQUIRE(circles[i].p.x == i && circles[i].p.y == i && circles[i].r == i);
+    REQUIRE(circles[i].p.x == i);
+    REQUIRE(circles[i].p.y == i);
+    REQUIRE(circles[i].r == i);
+    // REQUIRE(circles[i].p.x == i && circles[i].p.y == i && circles[i].r == i);
   }
+  REQUIRE(true);
 }
 
 TEST_CASE("circle_is_valid", "[circle]") {
@@ -21,21 +25,21 @@ TEST_CASE("circle_is_valid", "[circle]") {
       .r = 1,
   };
 
-  REQUIRE(circle_is_valid(c1));
+  REQUIRE(circle_is_valid(&c1));
 
   circle c2 = {
       .p = {0, 0},
       .r = 0,
   };
 
-  REQUIRE(!circle_is_valid(c2));
+  REQUIRE(!circle_is_valid(&c2));
 
   circle c3 = {
       .p = {1, -3},
       .r = -2,
   };
 
-  REQUIRE(!circle_is_valid(c3));
+  REQUIRE(!circle_is_valid(&c3));
 }
 TEST_CASE("translate", "[circle]") {
 
@@ -48,7 +52,10 @@ TEST_CASE("translate", "[circle]") {
 
   translate(&c1, &p1);
 
-  REQUIRE(c1.p.x == 1 && c1.p.y == 1 && c1.r == 1);
+  // REQUIRE(c1.p.x == 1 && c1.p.y == 1 && c1.r == 1);
+  REQUIRE(c1.p.x == 1);
+  REQUIRE(c1.p.y == 1);
+  REQUIRE(c1.r == 1);
 
   circle c2 = {
       .p = {-1, 3},
@@ -59,7 +66,10 @@ TEST_CASE("translate", "[circle]") {
 
   translate(&c2, &p2);
 
-  REQUIRE(c2.p.x == -2 && c2.p.y == -2 && c2.r == 7);
+  // REQUIRE(c2.p.x == -2 && c2.p.y == -2 && c2.r == 7);
+  REQUIRE(c2.p.x == -2);
+  REQUIRE(c2.p.y == -2);
+  REQUIRE(c2.r == 7);
 }
 
 TEST_CASE("is_jolly_jumper", "[jolly_jumper]") {
