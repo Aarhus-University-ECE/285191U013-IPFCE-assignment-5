@@ -4,7 +4,7 @@
 #include "circle.h"
 #include "jollyjumper.h"
 
-void print_circle(circle c) {
+void print_circle(const circle c) {
   printf("p.x: %d, p.y: %d, r: %d\n", c.p.x, c.p.y, c.r);
 }
 
