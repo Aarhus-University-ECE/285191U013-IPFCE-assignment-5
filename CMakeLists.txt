@@ -19,7 +19,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_library(circle STATIC circle.c)
+target_compile_definitions(circle PRIVATE -DTEST)
 add_library(jolly_jumper STATIC jolly_jumper.c)
+target_compile_definitions(jolly_jumper PRIVATE -DTEST)
 
 add_executable(unit-tests tests/tests.cpp)
 target_include_directories(unit-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

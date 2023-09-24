@@ -15,6 +15,8 @@ void translate(circle *c, const point *p) {
 
 #ifndef TEST
 
-int main() { return 0; }
+int main() { 
+	return 0;
+}
 
 #endif
