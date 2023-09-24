@@ -12,7 +12,7 @@ bool is_jolly_jumper(const int seq[], int size) {
 // Answer to exercise 7.b
 int main() {
 
-	return 0;
+  return 0;
 }
 
 #endif
