@@ -1,3 +1,4 @@
 #pragma once
+#include <stdbool.h>
 
-int is_jolly_jumber(const int seq[], int size);
+bool is_jolly_jumper(const int seq[], int size);

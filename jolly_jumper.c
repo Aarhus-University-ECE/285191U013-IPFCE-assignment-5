@@ -1,9 +1,8 @@
-#include <stdbool.h>
 #include <stdlib.h>
 
-#include "jollyjumper.h"
+#include "jolly_jumper.h"
 
-int is_jolly_jumber(const int seq[], int size) {
+bool is_jolly_jumper(const int seq[], int size) {
   // post: answer to exercise 7.a
-  return 1;
+  return false;
 }
