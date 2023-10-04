@@ -20,33 +20,31 @@ TEST_CASE("five_circles", "[circle]") {
 
 TEST_CASE("circle_is_valid", "[circle]") {
 
-  circle c1 = {
-      .p = {0, 0},
-      .r = 1,
-  };
+  circle c1;
+  c1.r = 1;
+  c1.p = (point) {0, 0};
 
   REQUIRE(circle_is_valid(&c1));
 
-  circle c2 = {
-      .p = {0, 0},
-      .r = 0,
-  };
+  circle c2;
+  c2.r = 0;
+  c2.p = (point) {0, 0};
 
   REQUIRE(!circle_is_valid(&c2));
 
-  circle c3 = {
-      .p = {1, -3},
-      .r = -2,
-  };
+  circle c3;
+  c3.r = -2;
+  c3.p = (point) {1, -3};
 
   REQUIRE(!circle_is_valid(&c3));
 }
+
+
 TEST_CASE("translate", "[circle]") {
 
-  circle c1 = {
-      .p = {0, 0},
-      .r = 1,
-  };
+  circle c1;
+  c1.r = 1;
+  c1.p = (point) {0, 0};
 
   const point p1 = {.x = 1, .y = 1};
 
@@ -57,10 +55,10 @@ TEST_CASE("translate", "[circle]") {
   REQUIRE(c1.p.y == 1);
   REQUIRE(c1.r == 1);
 
-  circle c2 = {
-      .p = {-1, 3},
-      .r = 7,
-  };
+
+  circle c2;
+  c2.r = 7;
+  c2.p = (point) {-1,3};
 
   const point p2 = {.x = -1, .y = -5};
 
@@ -71,6 +69,8 @@ TEST_CASE("translate", "[circle]") {
   REQUIRE(c2.p.y == -2);
   REQUIRE(c2.r == 7);
 }
+
+
 
 TEST_CASE("is_jolly_jumper", "[jolly_jumper]") {
 
